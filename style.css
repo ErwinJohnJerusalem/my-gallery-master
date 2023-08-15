@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+
+:root{
+  --clr-gray-1: #4E5150 ;
+  --clr-gray-2: #A9A9A9 ;
+  --clr-gray-3: #E5E5E5 ;
+  --clr-gray-4: #4E5150 ;
+  --clr-gray-5: #BDBDBD;
+  
+  
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  /* img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  } */
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  h1, h2, h3{
+    line-height: 1;
+  }
+
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    height: 100vh;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 48px;
+    padding: 0 16px;
+    
+}
+
+header{
+  display: flex;
+  justify-content: center;
+}
+
+.profile__details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.profile__pic{
+  max-width: 156px;
+  border-radius: 16px;
+}
+
+.profile__name{
+  color: var(--clr-gray-1);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.profile__address{
+  color: var(--clr-gray-2);
+  font-size: 0.875rem;
+  font-weight:500;
+}
+
+.profile__card{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100px;
+  border-radius: 12px;
+  background-color: var(--clr-gray-3) ;
+  padding: 14px;
+}
+
+.card .numbers{
+  color: var(--clr-gray-4);
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.card__details{
+  color: var(--clr-gray-5) ;
+  font-size: 0.875rem;
+}
+
+/* Main content */
+
+main{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: 
+  "p1 p2 p2"
+  "p3 p3 p4"
+  "p6 p5 p4";
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.gallery{
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.gallery img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.photo1{
+ grid-area: p1;
+}
+.photo2{
+ 
+  grid-area: p2;
+}
+.photo3{
+  grid-area: p3;
+}
+
+/* Edit Photo 4 */
+
+.photo4{
+  grid-area: p4;
+}
+
+.photo5{
+  grid-area: p5;
+  
+}
+
+.photo6{
+  grid-area: p6;
+}
+
+/* Footer */
+
+footer p{
+  margin-top: 100px;
+  padding: 16px;
+  text-align: center;
+  color:  #B9BDCF;
+  font-size: 14px;
+}
+
+footer span{
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+@media (max-width: 376px){
+  .profile__pic{
+    max-width: 100px;
+  }
+
+  .profile__name{
+    font-size: 0.875rem;
+    
+  }
+  
+  .profile__address{
+    font-size: 0.625rem;
+  }
+
+  .card{
+    max-width: 80px;
+  }
+
+  .card .numbers{
+    font-size: 0.75rem;
+  }
+  
+  .card__details{
+   font-size: 0.75rem;
+  }
+
+  main{
+    gap: 12px;
+  }
+  
+  
+}
