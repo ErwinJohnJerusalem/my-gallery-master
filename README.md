@@ -36,7 +36,7 @@
 
 ## Overview
 
-![screenshot](https://main--amazing-taiyaki-b23839.netlify.app/)
+![screenshot](https://github.com/ErwinJohnJerusalem/my-gallery-master/blob/main/images/my-gallery-preview.jpeg)
 
 Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 
